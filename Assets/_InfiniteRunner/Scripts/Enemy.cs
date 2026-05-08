@@ -30,6 +30,7 @@ namespace _InfiniteRunner.Scripts
         private void Die()
         {
             GetComponent<Collider>().enabled = false;
+            //TODO: Finish Die function with mandatory object destruction
         }
 
         private void TakeDamage(int damage)
