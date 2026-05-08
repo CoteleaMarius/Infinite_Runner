@@ -5,9 +5,17 @@ namespace _InfiniteRunner.Scripts
 {
     public class CollisionHandler : MonoBehaviour
     {
+        private static readonly int Die = Animator.StringToHash("Die");
         [SerializeField] private int mainSceneIndex;
         [SerializeField] private float loadDelayCrash = 1f;
 
+        private Animator _animator;
+        
+        private void Awake()
+        {
+            _animator = GetComponentInChildren<Animator>();
+        }
+        
         private void LoadMainScene()
         {
             SceneManager.LoadScene(mainSceneIndex);
@@ -15,6 +23,7 @@ namespace _InfiniteRunner.Scripts
 
         private void Crash()
         {
+            _animator.SetTrigger(Die);
             GetComponent<PlayerMover>().enabled = false;
             GetComponentInChildren<PlayerShooting>().enabled = false;
             FindObjectOfType<ScoreCounter>().CantCount();
