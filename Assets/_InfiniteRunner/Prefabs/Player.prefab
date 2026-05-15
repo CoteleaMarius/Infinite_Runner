@@ -3865,7 +3865,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
+    maxKillSpeed: 100
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
@@ -5096,7 +5096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f6f0032cecaf446699aa200b2968abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   damageText: {fileID: 5607044375713799891}
 --- !u!1 &1501410299868224474
 GameObject:
@@ -5741,6 +5741,7 @@ GameObject:
   - component: {fileID: 4117008248989185613}
   - component: {fileID: 6280083880446302648}
   - component: {fileID: 4057423516327165034}
+  - component: {fileID: 7527057609750561401}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -5881,6 +5882,20 @@ MonoBehaviour:
   gravity: -9
   lineDistance: 2.5
   linesToMove: 1
+--- !u!114 &7527057609750561401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4755752177751182881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9085b457089b14f44a929ea141802b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSceneIndex: 0
+  loadDelayCrash: 3
 --- !u!1 &5050730152997568351
 GameObject:
   m_ObjectHideFlags: 0
@@ -6683,6 +6698,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 95805638432926132, guid: dbf7a0c9d76b77a40af3104feac0641d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 08c08bd9f80294b208312dad068d98cb, type: 2}
     m_RemovedComponents:
     - {fileID: 136275810615880682, guid: dbf7a0c9d76b77a40af3104feac0641d, type: 3}
     m_RemovedGameObjects: []

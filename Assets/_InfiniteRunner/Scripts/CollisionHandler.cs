@@ -32,7 +32,11 @@ namespace _InfiniteRunner.Scripts
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            if (hit.gameObject.GetComponent<Enemy>() != null) Crash();
+            if (hit.gameObject.GetComponent<Enemy>() != null)
+            {
+                hit.gameObject.GetComponent<Enemy>().Attack();
+                Crash();
+            }
         }
     }
 }

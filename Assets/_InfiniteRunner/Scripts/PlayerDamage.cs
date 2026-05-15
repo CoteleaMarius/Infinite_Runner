@@ -8,6 +8,11 @@ namespace _InfiniteRunner.Scripts
         [SerializeField] private int damage;
         [SerializeField] private TMP_Text damageText;
 
+        private void Start()
+        {
+            InvokeRepeating(nameof(UpdateUI), 0, 1f);
+        }
+        
         private void LoadDamage()
         {
             damage = PlayerPrefs.GetInt("Damage");
